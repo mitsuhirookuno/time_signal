@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
-require "slack"
-require "dotenv"
-
-exit
+require 'slack'
+require 'dotenv'
 
 exit if HolidayJp.holiday?(Date.today)
 
@@ -12,11 +10,10 @@ Slack.configure do |config|
 end
 
 case ARGV.first
-when 'TRAIN' 
-  Slack.chat_postMessage(text: 'baymax 電車', channel: '#server-side-team', as_user: "baymax")
-when 'WEATHER' 
-  Slack.chat_postMessage(text: 'baymax 天気 東京', channel: '#server-side-team', as_user: "baymax")
+when 'TRAIN'
+  Slack.chat_postMessage(text: 'baymax 電車', channel: '#server-side-team', as_user: 'baymax')
+when 'WEATHER'
+  Slack.chat_postMessage(text: 'baymax 天気 東京', channel: '#server-side-team', as_user: 'baymax')
 when 'SAY'
   Slack.chat_postMessage(text: ARGV[1], channel: '#server-side-team') unless ARGV[1].nil?
-else
 end

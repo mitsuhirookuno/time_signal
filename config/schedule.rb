@@ -20,13 +20,13 @@
 # Learn more: http://github.com/javan/whenever
 
 every '0 9 * * 1-5' do
-  command 'cd ~/workspace/time_signal ; ./time_signal.rb SAY おはようございます！もうすぐ始業です'
+  command 'cd ~/workspace/time_signal ; ./time_signal.rb SAY :sun_with_face:おはようございます！もうすぐ始業です:sun_with_face:'
   command 'cd ~/workspace/time_signal ; ./time_signal.rb WEATHER'
   command 'cd ~/workspace/time_signal ; ./time_signal.rb TRAIN'
 end
 
 every '0 19 * * 1-5' do
-  command 'cd ~/workspace/time_signal ; ./time_signal.rb SAY お疲れ様です。もうすぐ終業です'
+  command 'cd ~/workspace/time_signal ; ./time_signal.rb SAY :night_with_stars:お疲れ様です。もうすぐ終業です:night_with_stars:'
   command 'cd ~/workspace/time_signal ; ./time_signal.rb WEATHER'
   command 'cd ~/workspace/time_signal ; ./time_signal.rb TRAIN'
 end
