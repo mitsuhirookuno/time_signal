@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require 'slack'
 require 'dotenv'
+require 'holiday_jp'
 
 exit if HolidayJp.holiday?(Date.today)
 
